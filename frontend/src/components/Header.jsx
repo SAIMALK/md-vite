@@ -7,12 +7,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useLogoutMutation } from "../slices/usersApiSlice";
 import { logout } from "../slices/authSlice";
-import InfoIcon from "@mui/icons-material/Info";
-// import ListIcon from "@mui/icons-material/ListRounded";
-import ExitIcon from "@mui/icons-material/ExitToApp";
-import ProfileIcon from "@mui/icons-material/Person2";
-import ViewListIcon from '@mui/icons-material/ViewList'
-import RecentActorsIcon from '@mui/icons-material/RecentActors'
+import { FaInfoCircle } from 'react-icons/fa'; // import ListIcon from "@mui/icons-material/ListRounded";
+import { FaSignOutAlt } from 'react-icons/fa';
+import {  FaList, FaUsers } from 'react-icons/fa';
+
 import {
   CircleMenu,
   CircleMenuItem,
@@ -222,7 +220,7 @@ function Header({ handleBackgroundBlur }) {
                         handleMenuClosed();
                       }}
                     >
-                      <ProfileIcon />
+                      <FaUser />
                     </CircleMenuItem>
 
                     <CircleMenuItem
@@ -233,14 +231,14 @@ function Header({ handleBackgroundBlur }) {
                       }}
                       tooltipPlacement={TooltipPlacement.Left}
                     >
-                      <ExitIcon />
+                      <FaSignOutAlt />
                     </CircleMenuItem>
                     <CircleMenuItem
                       onClick={() => alert("No info just yet :(")}
                       tooltip="Info"
                       tooltipPlacement={TooltipPlacement.Bottom}
                     >
-                      <InfoIcon />
+                      <FaInfoCircle />
                     </CircleMenuItem>
                   </CircleMenu>
                 </div>
@@ -271,7 +269,7 @@ function Header({ handleBackgroundBlur }) {
                         handleAdminMenuClosed();
                       }}
                     >
-                      <ProfileIcon />
+                      <FaUser />
                     </CircleMenuItem>
                     <CircleMenuItem
                       tooltip="Story List"
@@ -281,7 +279,7 @@ function Header({ handleBackgroundBlur }) {
                         handleAdminMenuClosed();
                       }}
                     >
-                      <ViewListIcon />
+                      <FaList />
                     </CircleMenuItem>
                     <CircleMenuItem
                       onClick={() => {
@@ -291,7 +289,7 @@ function Header({ handleBackgroundBlur }) {
                       tooltip="User List"
                       tooltipPlacement={TooltipPlacement.Bottom}
                     >
-                      <RecentActorsIcon />
+                      <FaUsers />
                     </CircleMenuItem>
                     <CircleMenuItem
                       tooltip="Logout"
@@ -301,7 +299,7 @@ function Header({ handleBackgroundBlur }) {
                       }}
                       tooltipPlacement={TooltipPlacement.Left}
                     >
-                      <ExitIcon />
+                      <FaSignOutAlt />
                     </CircleMenuItem>
                     
                   </CircleMenu>

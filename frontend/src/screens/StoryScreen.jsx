@@ -6,7 +6,6 @@ import "react-circular-progressbar/dist/styles.css";
 import Commentsection from "../components/Commentsection";
 import { easeQuadIn } from "d3-ease";
 import "../assets/styles/style.css";
-import { Button } from "@mui/material";
 import { FaReadme } from "react-icons/fa6";
 import { useGetStoryDetailsQuery } from "../slices/storysApiSlice";
 import Message from "../components/Message";
@@ -111,7 +110,7 @@ const StoryScreen = () => {
                     </p>
                     <Link to={`/Story/${story._id}/chapters/`}>
                       <div>
-                        <Button
+                        <button
                           style={{
                             backgroundColor: "#212529",
                             color: "#FFF",
@@ -121,7 +120,7 @@ const StoryScreen = () => {
                         >
                           <FaReadme />
                           &nbsp;Read Manga
-                        </Button>
+                        </button>
                       </div>
                     </Link>
                   </div>
