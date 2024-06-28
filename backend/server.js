@@ -1,8 +1,8 @@
 import express from "express";
 import path from "path";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import cookieParser from 'cookie-parser'
-dotenv.config();
+// dotenv.config();
 import storyRoute from "./routes/storyRoute.js";
 import authorRoute from "./routes/authorRoute.js";
 import  userRoute from './routes/userRoute.js';
